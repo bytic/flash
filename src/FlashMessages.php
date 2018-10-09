@@ -2,10 +2,20 @@
 
 namespace Nip\FlashData;
 
+/**
+ * Class FlashMessages
+ * @package Nip\FlashData
+ */
 class FlashMessages extends FlashData
 {
-    protected $session_var = 'flash-messages';
+    protected $sessionKey = 'flash-messages';
 
+    /**
+     * @param $var
+     * @param $type
+     * @param bool $value
+     * @return $this
+     */
     public function add($var, $type, $value = false)
     {
         if (!is_array($this->next[$var][$type])) {
@@ -19,22 +29,6 @@ class FlashMessages extends FlashData
         }
 
         $this->write();
-
         return $this;
-    }
-
-    /**
-     * Returns static instance.
-     *
-     * @return self
-     */
-    public static function &instance()
-    {
-        static $instance;
-        if (!($instance instanceof self)) {
-            $instance = new self();
-        }
-
-        return $instance;
     }
 }
