@@ -1,0 +1,1 @@
+C:37:"PHPUnit\Runner\DefaultTestResultCache":250:{a:2:{s:7:"defects";a:1:{s:49:"Nip\FlashData\Tests\FunctionsTest::test_flash_get";i:4;}s:5:"times";a:2:{s:64:"Nip\FlashData\Tests\FlashServiceProviderTest::testRegisterLoader";d:0.033;s:49:"Nip\FlashData\Tests\FunctionsTest::test_flash_get";d:0.002;}}}

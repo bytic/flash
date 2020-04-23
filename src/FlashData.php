@@ -20,7 +20,9 @@ class FlashData
     protected $previous = [];
     protected $next = [];
 
-    protected $sessionKey = 'flash-data';
+    const  DEFAULT_SESSION_KEY = 'flash-data';
+
+    protected $sessionKey = self::DEFAULT_SESSION_KEY;
 
     /**
      * FlashData constructor.

@@ -16,12 +16,15 @@
     },
     "classmap": [
       "legacy"
+    ],
+    "files": [
+      "src/functions/flash.php"
     ]
   },
   "autoload-dev": {
     "psr-4": {
-      "Nip\\Cookie\\Tests\\": "tests/",
-      "Nip\\Cookie\\Tests\\Fixtures\\": "tests/fixtures"
+      "Nip\\FlashData\\Tests\\": "tests/src",
+      "Nip\\FlashData\\Tests\\Fixtures\\": "tests/fixtures"
     }
   },
   "require": {

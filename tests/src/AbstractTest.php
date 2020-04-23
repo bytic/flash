@@ -15,4 +15,11 @@ abstract class AbstractTest extends TestCase
      * @var \UnitTester
      */
     protected $tester;
+
+    protected function setUp(): void
+    {
+        parent::setUp();
+
+        \Nip\Container\Container::setInstance(new \Nip\Container\Container());
+    }
 }
