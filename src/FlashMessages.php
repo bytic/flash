@@ -11,24 +11,22 @@ class FlashMessages extends FlashData
     protected $sessionKey = 'flash-messages';
 
     /**
-     * @param $var
-     * @param $type
-     * @param bool $value
-     * @return $this
+     * @inheritDoc
      */
     public function add($var, $type, $value = false)
     {
-        if (!is_array($this->next[$var][$type])) {
-            $this->next[$var][$type] = [$value];
+        $valueNext = isset($this->next[$var]) ? $this->next[$var] : [];
+
+        if (!is_array($valueNext[$type])) {
+            $valueNext[$type] = [$value];
         } else {
             if (is_array($value)) {
-                $this->next[$var][$type] = [$this->next[$var][$type], $value];
+                $valueNext[$type] = [$valueNext[$type], $value];
             } else {
-                $this->next[$var][$type][] = $value;
+                $valueNext[$type][] = $value;
             }
         }
 
-        $this->write();
-        return $this;
+        parent::add($var, $value);
     }
 }
