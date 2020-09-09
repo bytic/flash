@@ -17,7 +17,7 @@ class FlashMessages extends FlashData
     {
         $valueNext = isset($this->next[$var]) ? $this->next[$var] : [];
 
-        if (!is_array($valueNext[$type])) {
+        if (!isset($valueNext[$type]) || !is_array($valueNext[$type])) {
             $valueNext[$type] = [$value];
         } else {
             if (is_array($value)) {
@@ -27,6 +27,6 @@ class FlashMessages extends FlashData
             }
         }
 
-        parent::add($var, $value);
+        parent::add($var, $valueNext);
     }
 }
