@@ -10,7 +10,6 @@ use Nip\Container\ServiceProviders\Providers\AbstractSignatureServiceProvider;
  */
 class FlashServiceProvider extends AbstractSignatureServiceProvider
 {
-
     /**
      * @inheritdoc
      */
