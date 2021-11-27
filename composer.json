@@ -28,7 +28,7 @@
     }
   },
   "require": {
-    "php": "^7.1"
+    "php": "^7.1|8.0"
   },
   "require-dev": {
     "bytic/container": "^0.9|^1.0|^2.0",

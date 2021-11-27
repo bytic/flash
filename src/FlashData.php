@@ -45,12 +45,12 @@ class FlashData
 
     public function has($var)
     {
-        return isset($this->previous[trim($var)]) ? true : false;
+        return isset($this->previous[trim($var)]);
     }
 
     public function get($var)
     {
-        return isset($this->previous[trim($var)]) ? $this->previous[trim($var)] : null;
+        return $this->previous[trim($var)] ?? null;
     }
 
     public function add($var, $value)

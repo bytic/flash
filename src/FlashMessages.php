@@ -15,7 +15,7 @@ class FlashMessages extends FlashData
      */
     public function add($var, $type, $value = false)
     {
-        $valueNext = isset($this->next[$var]) ? $this->next[$var] : [];
+        $valueNext = $this->next[$var] ?? [];
 
         if (!isset($valueNext[$type]) || !is_array($valueNext[$type])) {
             $valueNext[$type] = [$value];
